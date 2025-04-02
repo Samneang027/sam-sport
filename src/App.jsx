@@ -7,6 +7,7 @@ import Footer from "./components/footer";
 import ButtonShop from "./components/button_shop";
 import CardSale from "./components/card_sale";
 import OrderList from "./components/order_list";
+import HeaderSlide from "./components/header_slide";
 export default function MyApp() {
   return (
     <div>
@@ -18,6 +19,7 @@ export default function MyApp() {
       <Footer/>
       <CardSale/>
       <OrderList/>
+      <HeaderSlide/>
     </div>
   );
 }
