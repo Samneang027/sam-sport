@@ -4,7 +4,7 @@
 function Menu() {
     return (
         <nav className='bg-secondary p-2 lg:p-4'>
-            <div className='flex justify-between'>
+            <div className='flex justify-between container mx-auto'>
                 <h1 className='aclonica font-bold text-xs md:text-sm lg:text-xl p-2'>SAM SPORT</h1>
                 <div className='flex justify-between text-xs md:text-sm lg:text-xl'>
                     <a href="#" className='p-2 hover:text-primary hover:underline underline-offset-4'>Home</a>

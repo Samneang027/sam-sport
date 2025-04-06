@@ -1,11 +1,13 @@
-import shoeimage from "/public/image/Air Force Air Jordan Nike.png";
-function Card() {
+function Card({ imageSrc, title }) {
     return (
-        <div className="bg-primary hover:bg-brown w-35 h-45 md:w-50 md:h-60 lg:w-70 lg:h-90">
-            <a href="#">
-                <img className="pt-4 pb-4 lg:pt-8 lg:pb-8" src={shoeimage} alt="Air Jordan" />
-                <h2 className="text-md md:text-xl lg:text-3xl font-semibold text-white text-center">Air Force Air Jordan Nike</h2>
-            </a>
+        <div className="bg-primary hover:bg-brown w-28 md:w-50 lg:w-70 mx-auto">
+            <div className="h-32 md:h-40 lg:h-52 flex justify-center items-center">
+                <img className="max-h-full max-w-full object-contain" src={imageSrc} alt={title} />
+            </div>
+            <div className="h-16 flex justify-center items-center">
+                <h2 className="text-sm md:text-xl lg:text-3xl font-semibold text-white text-center">{title}</h2>
+            </div>
         </div>
     );
-} export default Card;
+}
+export default Card;

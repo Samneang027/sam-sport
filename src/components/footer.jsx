@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer className="bg-secondary text-primary">
+        <footer className="mt-16 bg-secondary text-primary">
             <div className="p-4 md:p-6 lg:p-8">
                 <h1 className="aclonica text-sm md:text-lg lg:text-3xl">SAM SPORT</h1>
                 <p className="text-xs md:text-sm lg:text-xl pt-2 lg:pt-4 max-h-20 overflow-y-auto">SAM Sport is an e-commerce brand that specializes in selling sportswear, shoes, and various types of sports equipment online. 

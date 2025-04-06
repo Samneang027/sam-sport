@@ -2,7 +2,7 @@ import ButtonAdd from "./button_add";
 import shoeimage from "/public/image/Air Force Air Jordan Nike.png";
 function CardDetails() {
     return (
-        <div className="flex border border-secondary content-between m-2 md:m-6 lg:m-12">
+        <div className="flex border border-secondary content-between m-2 md:m-6 lg:m-12 container mx-auto">
             <div className="items-center flex pr-4 pl-4 md:pr-8 md:pl-8 lg:pr-12 lg:pl-12">
                 <div className="bg-secondary w-36 h-50 md:w-60 md:h-60 lg:w-90 lg:h-90 flex items-center justify-center rounded-xl">
                     <img src={shoeimage} alt="Air Force Air" className="max-w-full max-h-full" />

@@ -2,7 +2,7 @@ import shoeimage from "/public/image/Air Force Air Jordan Nike.png";
 
 function CardSale() {
     return (
-        <div className="p-4">
+        <div className="p-4 container mx-auto">
             <a href="#">
                 <div className="items-center flex">
                     <div className="bg-secondary hover:bg-gray w-40 h-40 flex items-center justify-center">

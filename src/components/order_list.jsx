@@ -5,7 +5,7 @@ import { faCircleMinus } from "@fortawesome/free-solid-svg-icons";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 function OrderList() {
     return (
-        <div className="p-4 flex border-1 border-secondary justify-between">
+        <div className="p-4 flex border-1 border-secondary justify-between container mx-auto">
             <div className="items-center flex">
                 <div className="bg-secondary hover:bg-gray w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                     <img src={shoeimage} alt="Air Force Air" className="max-w-full max-h-full" />
