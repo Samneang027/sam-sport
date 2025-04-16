@@ -31,56 +31,56 @@ function HomePage() {
         <body>
             <Menu/>
             <HeaderSlide/>
-            <section className="p-4 container mx-auto">
-                <h1 className="text-title font-bold text-md text-center pt-4">DESIGNED FOR THE GRIND</h1>
-                <div className="flex justify-center pt-8">
-                    <img className="w-30 h-30" src={playertennis} alt="playertennis" />
-                    <img className="w-30 h-30 pr-2 pl-2" src={ronaldonike} alt="ronaldonike" />
-                    <img className="w-30 h-30" src={playerrunning} alt="playerrunning" />
+            <section className="p-4 md:p-8 lg:p-12 container mx-auto">
+                <h1 className="text-title font-bold text-md md:text-2xl lg:text-4xl text-center pt-4 md:pt-8 lg:pt-12">DESIGNED FOR THE GRIND</h1>
+                <div className="flex justify-center pt-8 md:pt-16 lg:pt-24">
+                    <img className="w-30 h-30 md:w-60 md:h-60 lg:w-90 lg:h-90" src={playertennis} alt="playertennis" />
+                    <img className="w-30 h-30 md:w-60 md:h-60 lg:w-90 lg:h-90 pr-2 pl-2" src={ronaldonike} alt="ronaldonike" />
+                    <img className="w-30 h-30 md:w-60 md:h-60 lg:w-90 lg:h-90" src={playerrunning} alt="playerrunning" />
                 </div>
             </section>
-            <section className="p-4 container mx-auto">
-                <h1 className="text-title font-bold text-md text-center">PRODUCT QUALITY SOURCE</h1>
-                <div className="flex justify-center pt-8">
-                    <img className="w-40 h-25 pr-4" src={adidasoffice} alt="adidasoffice" />
-                    <p className="text-xs text-left">Adidas now has global corporate headquarters in Herzogenaurach, Germany and many other business locations around the world such as London, Portland, Toronto, Tokyo, Australia, Taiwan and Spain.</p>
+            <section className="p-4 md:p-8 lg:p-12 container mx-auto">
+                <h1 className="text-title font-bold text-md md:text-2xl lg:text-4xl text-center">PRODUCT QUALITY SOURCE</h1>
+                <div className="flex justify-center pt-8 md:pt-16 lg:pt-24">
+                    <img className="w-40 h-25 md:w-80 md:h-50 lg:w-120 lg:h-75 pr-4 md:pr-8 lg:pr-12" src={adidasoffice} alt="adidasoffice" />
+                    <p className="text-xs md:text-lg lg:text-3xl text-left">Adidas now has global corporate headquarters in Herzogenaurach, Germany and many other business locations around the world such as London, Portland, Toronto, Tokyo, Australia, Taiwan and Spain.</p>
                 </div>
-                <div className="flex justify-center pt-16">
-                    <p className="text-xs text-right">The PUMA corporate Headquarters are located in Herzogenaurach or Herzo, as we like to call our hometown, located in southern Germany close to Nuremberg. Every day, more than 1000 colleagues walk through our doors, ready to push sport and culture forward.</p>
-                    <img className="w-40 h-25 pl-4" src={pumaoffice} alt="pumaoffice" />
+                <div className="flex justify-center pt-16 md:pt-24 lg:pt-32">
+                    <p className="text-xs md:text-lg lg:text-3xl text-right">The PUMA corporate Headquarters are located in Herzogenaurach or Herzo, as we like to call our hometown, located in southern Germany close to Nuremberg. Every day, more than 1000 colleagues walk through our doors, ready to push sport and culture forward.</p>
+                    <img className="w-40 h-25 md:w-80 md:h-50 lg:w-120 lg:h-75 pl-4 md:pl-8 lg:pl-12" src={pumaoffice} alt="pumaoffice" />
                 </div>
-                <div className="flex justify-center pt-16">
-                    <img className="w-40 h-25 pr-4" src={nikeoffice} alt="nikeoffice" />
-                    <p className="text-xs text-left">The Nike Worldwide Headquarters is the global headquarters for Nike, Inc., located in an unincorporated area of Washington County near Beaverton, Oregon, in the United States. The campus has more than 75 buildings on 286 acres, as of 2018.</p>
+                <div className="flex justify-center pt-16 md:pt-24 lg:pt-32">
+                    <img className="w-40 h-25 md:w-80 md:h-50 lg:w-120 lg:h-75 pr-4 md:pr-8 lg:pr-12" src={nikeoffice} alt="nikeoffice" />
+                    <p className="text-xs md:text-lg lg:text-3xl text-left">The Nike Worldwide Headquarters is the global headquarters for Nike, Inc., located in an unincorporated area of Washington County near Beaverton, Oregon, in the United States. The campus has more than 75 buildings on 286 acres, as of 2018.</p>
                 </div>
             </section>
-            <section className="p-4 container mx-auto">
-                <h1 className="text-title font-bold text-md text-center">EXPLORE THE COLLECTION</h1>
-                <div className="pt-8">
+            <section className="p-4 md:p-8 lg:p-12 container mx-auto">
+                <h1 className="text-title font-bold text-md md:text-2xl lg:text-4xl text-center">EXPLORE THE COLLECTION</h1>
+                <div className="pt-8 md:pt-16 lg:pt-24">
                     <CardShop imageSrc={nikelandscape} title="nikelandscape"/>
                     <CardShop imageSrc={pumalandscape} title="pumalandscape"/>
                     <CardShop imageSrc={adidaslandscape} title="adidaslandscape"/>
                 </div>
             </section>
-            <section className="p-1 container mx-auto">
-                <h1 className="text-title font-bold text-md text-center pt-3">CURRENT MUST-HAVES</h1>
+            <section className="p-1 md:p-2 lg:p-3 container mx-auto">
+                <h1 className="text-title font-bold text-md md:text-2xl lg:text-4xl text-center pt-3 md:pt-6 lg:pt-9">CURRENT MUST-HAVES</h1>
                 <div>
-                    <div className="flex justify-center pt-8">
+                    <div className="flex justify-center pt-8 md:pt-16 lg:pt-24">
                         <Card imageSrc={shirtadidas} title="Real Madrid C.F T-shirt Jersey Kit"/>
                         <Card imageSrc={balladidas} title="Ball Adidas Finale"/>
                         <Card imageSrc={hatadidas} title="Cap Hat Adidas"/>
                     </div>
-                    <div className="flex justify-center pt-4">
+                    <div className="flex justify-center pt-4 md:pt-8 lg:pt-12">
                         <Card imageSrc={shoeadidas} title="Sneakers Adidas Originals Shoe ASICS"/>
                         <Card imageSrc={shirtnike} title="Tracksuit Nike Jacket Hood Windbreaker"/>
                         <Card imageSrc={ballnike} title="Nike Ordem"/>
                     </div>
-                    <div className="flex justify-center pt-4">
+                    <div className="flex justify-center pt-4 md:pt-8 lg:pt-12">
                         <Card imageSrc={hatnike} title="black Nike fitted cap"/>
                         <Card imageSrc={shoenike} title="Air Force Air Jordan Nike"/>
                         <Card imageSrc={shirtpuma} title="Borussia Dortmund Jersey Shirt Kit"/>
                     </div>
-                    <div className="flex justify-center pt-4">
+                    <div className="flex justify-center pt-4 md:pt-8 lg:pt-12">
                         <Card imageSrc={ballpuma} title="Futsal Football Puma Sport"/>
                         <Card imageSrc={bagpuma} title="Pink and Black Puma Backpack"/>
                         <Card imageSrc={shoepuma} title="Shoe Cleat Sneakers Puma"/>

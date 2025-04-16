@@ -12,7 +12,7 @@ import pumaslide from "/public/image/puma-grealish.jpg";
 
 function HeaderSlide() {
     return (
-        <div className="w-full">
+        <div className="mt-12 w-full">
             <Swiper
                 modules={[Pagination, Autoplay]}
                 spaceBetween={20}
