@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()
     ,tailwindcss(),
   ],
-  // base: "/sam-sport",
+  base: "/sam-sport",
   // server: {
   //   historyApiFallback: true // makes refresh work in dev
   // }
