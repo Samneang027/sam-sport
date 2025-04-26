@@ -1,17 +1,17 @@
  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
  import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
- import {Link} from 'react-router-dom';
+ import {Link, NavLink} from 'react-router';
 function Menu() {
     return (
         <nav className='bg-secondary p-2 lg:p-4 fixed top-0 left-0 w-full overflow-hidden z-50'>
             <div className='flex justify-between container mx-auto'>
                 <h1 className='aclonica font-bold text-xs md:text-sm lg:text-xl p-2'>SAM SPORT</h1>
                 <div className='flex justify-between text-xs md:text-sm lg:text-xl'>
-                    <Link to="/" className='p-2 hover:text-primary hover:underline underline-offset-4'>Home</Link>
-                    <Link to="/nike" className='p-2 hover:text-primary hover:underline underline-offset-4'>Nike</Link>
-                    <Link to="/puma" className='p-2 hover:text-primary hover:underline underline-offset-4'>Puma</Link>
-                    <Link to="/adidas" className='p-2 hover:text-primary hover:underline underline-offset-4'>Adidas</Link>
+                    <NavLink to="/" className='p-2 hover:text-primary hover:underline underline-offset-4'>Home</NavLink>
+                    <NavLink to="/nike" className='p-2 hover:text-primary hover:underline underline-offset-4'>Nike</NavLink>
+                    <NavLink to="/puma" className='p-2 hover:text-primary hover:underline underline-offset-4'>Puma</NavLink>
+                    <NavLink to="/adidas" className='p-2 hover:text-primary hover:underline underline-offset-4'>Adidas</NavLink>
                 </div>
                 <div className="relative hidden md:flex p-2 lg:text-xl">
                     <div className="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none">

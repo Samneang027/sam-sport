@@ -27,8 +27,9 @@ import Footer from "../components/footer";
 
 
 function HomePage() {
+    
     return (
-        <body>
+        <div>
             <Menu/>
             <HeaderSlide/>
             <section className="p-4 md:p-8 lg:p-12 container mx-auto">
@@ -88,6 +89,6 @@ function HomePage() {
                 </div>
             </section>
             <Footer/>
-        </body>
+        </div>
     );
 }export default HomePage;
