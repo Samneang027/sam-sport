@@ -16,9 +16,9 @@ function NikePage() {
         },[]);
 console.log("Product",products);
   // Filter products by category name === 'Clothes'
-  const filteredProducts = products.filter(
-    (product) => product.category?.name === "Clothes"
-  );
+//   const filteredProducts = products.filter(
+//     (product) => product.category?.name === "Clothes"
+//   );
     return (
         <div>
             <Menu/>
@@ -27,7 +27,7 @@ console.log("Product",products);
             </section>
             <section className="flex justify-center">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                    {filteredProducts.map((product) =>(
+                    {products.map((product) =>(
                         <CardSale
                             key={product.id}
                             title={product.title}
