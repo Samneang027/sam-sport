@@ -58,9 +58,9 @@ function HomePage() {
             <section className="p-4 md:p-8 lg:p-12 container mx-auto">
                 <h1 className="text-title font-bold text-md md:text-2xl lg:text-4xl text-center">EXPLORE THE COLLECTION</h1>
                 <div className="pt-8 md:pt-16 lg:pt-24">
-                    <CardShop imageSrc={nikelandscape} title="nikelandscape"/>
-                    <CardShop imageSrc={pumalandscape} title="pumalandscape"/>
-                    <CardShop imageSrc={adidaslandscape} title="adidaslandscape"/>
+                    <CardShop imageSrc={nikelandscape} title="nikelandscape" linkTo="/nike"/>
+                    <CardShop imageSrc={pumalandscape} title="pumalandscape" linkTo="/puma"/>
+                    <CardShop imageSrc={adidaslandscape} title="adidaslandscape" linkTo="/adidas"/>
                 </div>
             </section>
             <section className="p-1 md:p-2 lg:p-3 container mx-auto">

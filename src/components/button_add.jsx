@@ -1,7 +1,16 @@
-function ButtonAdd() {
+import { useCart } from '../contexts/CartContext';
+import { useNavigate } from "react-router-dom";
+
+function ButtonAdd({product}) {
+    const {addToCart} = useCart();
+    const navigate = useNavigate();
+    const handleAddToCart = () => {
+        addToCart(product);
+        navigate('/');
+    };
     return (
         <div className="mt-4 mb-4">
-            <button className=" bg-primary p-4 w-35 md:w-50 lg:w-70 rounded-full items-center text-md md:text-xl lg:text-3xl text-white font-semibold hover:bg-secondary hover:text-black" type="button">Add to Bag</button>
+            <button onClick={handleAddToCart} className=" bg-primary p-4 w-35 md:w-50 lg:w-70 rounded-full items-center text-md md:text-xl lg:text-3xl text-white font-semibold hover:bg-secondary hover:text-black" type="button">Add to Bag</button>
         </div>
     );
 }export default ButtonAdd;

@@ -1,1 +1,1 @@
-export const BASE_URL = "https://api.escuelajs.co/"
+export const BASE_URL = "https://ishop-api.istad.co"
