@@ -8,7 +8,7 @@ function Menu({searchTerm = "", setSearchTerm = () => {}}) {
     return (
         <nav className='bg-secondary p-4 lg:p-6 fixed top-0 left-0 w-full overflow-hidden z-50'>
             <div className='flex justify-between container mx-auto'>
-                <h1 className='aclonica font-bold text-sm md:text-xl lg:text-2xl p-2'>SAM SPORT</h1>
+                <h1 className='aclonica font-bold text-xs md:text-xl lg:text-2xl p-2'>SAM SPORT</h1>
                 <div className='flex justify-between text-sm md:text-lg lg:text-2xl'>
                     <NavLink to="/" className='p-2 hover:text-primary hover:underline underline-offset-4'>Home</NavLink>
                     <NavLink to="/nike" className='p-2 hover:text-primary hover:underline underline-offset-4'>Nike</NavLink>

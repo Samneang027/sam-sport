@@ -26,7 +26,7 @@ function CardDetails({content}) {
                 <div className="max-h-20 lg:max-h-25 overflow-y-auto pt-2 pr-4 md:pr-8 lg:pr-12">
                     <p className="text-custom text-xs lg:text-xl text-justify">{content.description}</p>
                 </div>
-                <ButtonAdd content={content}/>
+                <ButtonAdd content={content} />
             </div>
         </div>
     );

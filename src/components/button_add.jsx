@@ -1,11 +1,11 @@
 import { useCart } from '../contexts/CartContext';
 import { useNavigate } from "react-router-dom";
 
-function ButtonAdd({product}) {
+function ButtonAdd({content}) {
     const {addToCart} = useCart();
     const navigate = useNavigate();
     const handleAddToCart = () => {
-        addToCart(product);
+        addToCart(content);
         navigate('/');
     };
     return (
