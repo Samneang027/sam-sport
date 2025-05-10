@@ -7,6 +7,8 @@ import PumaPage from "./pages/puma-page";
 import AdidasPage from "./pages/adidas-page";
 import ProductDetailPage from "./pages/product-detail-page";
 import OrderListPage from "./pages/order-list-page";
+import SignInPage from "./pages/sign-in-page";
+import LoginPage from "./pages/login-page";
 export default function App() {
   return (
     <Routes >
@@ -16,6 +18,8 @@ export default function App() {
       <Route path="/adidas" element={<AdidasPage />} />
       <Route path="/product/:uuid" element={<ProductDetailPage/>}/>
       <Route path="/cart" element={<OrderListPage/>}/>
+      <Route path="/signin" element={<SignInPage/>}/>
+      <Route path="/login" element={<LoginPage/>}/>
     </Routes>
   );
 }
