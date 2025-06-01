@@ -5,11 +5,8 @@ import profile from "/public/image/cristiano-ronaldo-nike.jpg";
 import { getAllProduct } from "/service/product";
 import CardSale from "../components/card_sale";
 function NikePage() {
-    //call product
     const [products,setProducts] = useState([]);
-    // search product
     const [searchTerm, setSearchTerm] = useState("");
-        //UseEffect (called-back function, dependency)
         useEffect(()=> {
           const fetchProduct = async ()=>{
             const data = await getAllProduct();
@@ -18,10 +15,9 @@ function NikePage() {
           fetchProduct();
         },[]);
 console.log("Nike Product",products);
-  // Filter products by category name === 'Clothes'
     const filteredProducts = products.filter(
         (content) => {
-            const matchesCategory = content.brand.uuid === "1f42c1e6-6cf4-4e40-b493-815ba8c41d87";
+            const matchesCategory = content.brand.uuid === "1c4d7cd1-accb-4132-a9e2-2772b25cb9a9";
             const matchesSearch = content.name.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesSearch;
         }

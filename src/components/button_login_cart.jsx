@@ -1,4 +1,4 @@
-function ButtonLogin({ onClick, loading }) {
+function ButtonLoginCart({ onClick, loading }) {
     return (
         <button
             onClick={onClick}
@@ -18,4 +18,4 @@ function ButtonLogin({ onClick, loading }) {
     );
 }
 
-export default ButtonLogin;
+export default ButtonLoginCart;

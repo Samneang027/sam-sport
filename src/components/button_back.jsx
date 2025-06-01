@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLeftLong } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 function ButtonBack() {
     return (
-        <button className="bg-white hover:bg-custom font-bold md:text-xl lg:text-3xl pt-2 pr-6 pb-2 pl-6 rounded-full"><FontAwesomeIcon icon={faLeftLong} /></button>
+        <Link to="/" className="text-white hover:text-gray-400 font-bold md:text-xl lg:text-3xl"><FontAwesomeIcon icon={faLeftLong} /></Link>
     );
 }export default ButtonBack;

@@ -5,12 +5,9 @@ import profile from "/public/image/adidas messi.jpg";
 import { getAllProduct } from "/service/product";
 import CardSale from "../components/card_sale";
 function AdidasPage() {
-    // call product
     const [products, setProducts] = useState([]);
-    // search product
     const [searchTerm, setSearchTerm] = useState("");
     
-    //UseEffect (called-back function, dependency)
     useEffect(() => {
         const fetchProduct = async ()=>{
             const data = await getAllProduct();
@@ -19,10 +16,9 @@ function AdidasPage() {
         fetchProduct();
     },[]);
     console.log("Adidas Product" ,products);
-    // Filter product by category name === 'Furniture'
     const filteredProducts = products.filter(
         (content) => {
-            const matchesCategory = content.brand.uuid === "2f3a7f65-6d47-4dcc-a56f-79e7b1ca1687";
+            const matchesCategory = content.brand.uuid === "ab9e0c21-08b4-4d9b-8559-d488b8553a1f";
             const matchesSearch = content.name.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesSearch;
 

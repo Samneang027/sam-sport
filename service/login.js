@@ -1,9 +1,10 @@
 
 import { BASE_URL } from "./api";
 
-export async function InsertUser(userData) {
+// Accept user data as a parameter
+export async function Login(userData) {
   try {
-    const response = await fetch(`${BASE_URL}/api/v1/users/user-signup`, {
+    const response = await fetch(`${BASE_URL}/api/v1/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

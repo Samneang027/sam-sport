@@ -25,4 +25,20 @@
     display: inline-block;
     animation: scrollText 10s linear infinite;
 }
-  
+
+/* styles.css or global.css (optional, for print media) */
+/* or add this globally in index.css */
+@media print {
+  button, .no-print {
+    display: none !important;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #invoice-section, #invoice-section * {
+    visibility: visible;
+  }
+}

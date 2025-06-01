@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import profilelogin from "/public/image/welcome-login.jpg";
 import ButtonBack from '../components/button_back';
-import ButtonLogin from '../components/button_login';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { Login } from '/service/login';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import ButtonLoginCart from '../components/button_login_cart';
 
-export default function LoginPage() {
+export default function LoginCartPage() {
     const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -24,28 +24,27 @@ export default function LoginPage() {
             };
 
             const response = await Login(userData);
+
+            const isUser = response.user.roles.some(role => role.name === "USER");
             
-            const isAdmin = response.user.roles.some(role => role.name === "ADMIN");
-            
-            if (!isAdmin) {
-                throw new Error("Access denied. Admin privileges required.");
+            if (!isUser) {
+                throw new Error("Access denied. User privileges required.");
             }
             
-            // Store tokens and user data
             localStorage.setItem('accessToken', response.accessToken);
             localStorage.setItem('refreshToken', response.refreshToken);
             localStorage.setItem('userData', JSON.stringify(response.user));
-            localStorage.setItem('isAdmin', 'true');
+            localStorage.setItem('isUser', 'true');
             
             await Swal.fire({
                 title: 'Login Successful!',
-                text: `Welcome back, Admin ${response.user.username}!`,
+                text: `Welcome back, User ${response.user.username}!`,
                 icon: 'success',
                 timer: 1500,
                 showConfirmButton: false
             });
 
-            navigate('/admin-dashboard');
+            navigate('/user-dashboard');
 
         } catch (error) {
             await Swal.fire({
@@ -70,9 +69,9 @@ export default function LoginPage() {
                     />
                 </div>
                 
-                <div className="bg-green-800 p-8 w-full md:w-96">
+                <div className="bg-blue-800 p-8 w-full md:w-96">
                     <ButtonBack />
-                    <h1 className="text-center text-4xl font-bold text-white py-6">ADMIN LOGIN</h1>
+                    <h1 className="text-center text-4xl font-bold text-white py-6">USER LOGIN</h1>
                     
                     <div className="space-y-6">
                         <div>
@@ -113,7 +112,7 @@ export default function LoginPage() {
                             </span>
                         </div>
                         
-                        <ButtonLogin onClick={handleLogin} loading={loading} />
+                        <ButtonLoginCart onClick={handleLogin} loading={loading} />
                     </div>
                 </div>
             </div>

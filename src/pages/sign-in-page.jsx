@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import VerifyModal from '../components/verify_modal';
 import { BASE_URL } from "/service/api";
+import Swal from 'sweetalert2';
 
 export default function SignInPage() {
   const [username, setUsername] = useState("");
@@ -44,28 +45,36 @@ export default function SignInPage() {
 
 
     try {
-        const result = await InsertUser(userData);
-    
-        const user = result?.user;
-    
-        if (user?.emailVerified) {
-          localStorage.setItem("userVerified", "true");
-          localStorage.setItem("userUuid", user.uuid);
-          localStorage.setItem("userData", JSON.stringify(user));
-    
-          setStatus("success");
-          setTimeout(() => navigate("/home"), 1500);
-        } else {
-          setInsertedUser(user);
-          setShowVerifyModal(true);
-        }
-      } catch (error) {
-        setStatus("error");
-        console.error("Sign-in error:", error);
-      } finally {
-        setLoading(false);
+      const result = await InsertUser(userData);
+      const user = result?.user;
+
+      if (user?.emailVerified) {
+        await Swal.fire({
+          title: "Sign Up Successful!",
+          text: "You're being redirected...",
+          icon: "success",
+          showConfirmButton: false,
+          timer: 1500
+        });
+        localStorage.setItem("userVerified", "true");
+        localStorage.setItem("userUuid", user.uuid);
+        localStorage.setItem("userData", JSON.stringify(user));
+        navigate("/home");
+      } else {
+        setInsertedUser(user);
+        setShowVerifyModal(true);
       }
-    };
+    } catch (error) {
+      await Swal.fire({
+        icon: "error",
+        title: "Sign Up Failed",
+        text: error.message || "Please try again",
+        confirmButtonColor: "#3085d6",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
 
     
     const handleVerify = async (token) => {
@@ -75,31 +84,35 @@ export default function SignInPage() {
           });
           
           if (!response.ok) {
-            // Get more detailed error message from backend
-            const errorData = await response.json().catch(() => ({}));
-            throw new Error(errorData.message || "Verification failed");
+            throw new Error("Verification failed");
           }
       
           const data = await response.json();
+          const user = data?.user;
           
-          if (!data?.user?.emailVerified) {
-            throw new Error("Email verification not completed");
+          if (user?.emailVerified) {
+              await Swal.fire({
+              title: "Email Verified!",
+              text: "Your account is now active",
+              icon: "success",
+              showConfirmButton: false,
+              timer: 1500
+            });
           }
-      
-          // Store user data
+          
           localStorage.setItem("userVerified", "true");
           localStorage.setItem("userUuid", data.user.uuid);
           localStorage.setItem("userData", JSON.stringify(data.user));
       
-          setStatus("success");
           setShowVerifyModal(false);
-      
-          setTimeout(() => navigate("/"), 1500);
+          navigate("/login-cart");
         } catch (error) {
-          setStatus("error");
-          console.error("Verification error:", error.message);
-          // Show user-friendly error message
-          alert(`Verification failed: ${error.message}`);
+          await Swal.fire({
+            icon: "error",
+            title: "Verification Failed",
+            text: error.message || "Invalid verification code",
+            confirmButtonColor: "#3085d6",
+          });
         }
       };
       
