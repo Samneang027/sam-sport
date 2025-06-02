@@ -17,7 +17,7 @@ export default function UserDashboard() {
     }
   }, [navigate]);
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div>
       <Menu />
       
       <main className="flex-1 overflow-auto p-6">
