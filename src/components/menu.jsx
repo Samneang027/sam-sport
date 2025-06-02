@@ -27,7 +27,10 @@ function Menu({ searchTerm = "", setSearchTerm = () => {} }) {
     localStorage.removeItem("userData");
     localStorage.removeItem("userVerified");
     localStorage.removeItem("userUuid");
-    localStorage.removeItem("isUser")
+    localStorage.removeItem("isUser");
+    localStorage.removeItem("invoiceUser");
+    localStorage.removeItem("invoiceCartItems");
+    localStorage.removeItem("orderUuid");
     setUser(null);
     navigate('/');
   };
