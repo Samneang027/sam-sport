@@ -22,8 +22,12 @@ function Menu({ searchTerm = "", setSearchTerm = () => {} }) {
   }, []);
 
   const handleLogout = () => {
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
     localStorage.removeItem("userData");
     localStorage.removeItem("userVerified");
+    localStorage.removeItem("userUuid");
+    localStorage.removeItem("isUser")
     setUser(null);
     navigate('/');
   };
@@ -114,7 +118,7 @@ function Menu({ searchTerm = "", setSearchTerm = () => {} }) {
               </NavLink>
             </div>
 
-            <div className='hidden lg:block lg:text-2xl lg:p-2 md:hover:text-primary md:hover:underline md:underline-offset-4'>
+            <div className='p-2 text-xs md:text-lg lg:block lg:text-2xl md:hover:text-primary md:hover:underline md:underline-offset-4'>
               <button onClick={handleLogout}>Logout</button>
             </div>
           </>

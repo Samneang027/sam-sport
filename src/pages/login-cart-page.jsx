@@ -35,6 +35,7 @@ export default function LoginCartPage() {
             localStorage.setItem('refreshToken', response.refreshToken);
             localStorage.setItem('userData', JSON.stringify(response.user));
             localStorage.setItem('isUser', 'true');
+            localStorage.setItem('userUuid', response.user.uuid);
             
             await Swal.fire({
                 title: 'Login Successful!',

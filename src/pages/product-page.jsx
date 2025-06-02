@@ -344,7 +344,7 @@ const handleSubmit = async (e) => {
           <div>
             <label className="block font-medium mb-1">Price Out</label>
             <input
-              min={0}
+              min={0.01}
               type="number"
               name="priceOut"
               value={product.priceOut}

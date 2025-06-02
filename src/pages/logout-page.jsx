@@ -13,6 +13,7 @@ export default function LogoutPage() {
         localStorage.removeItem('refreshToken');
         localStorage.removeItem('userData');
         localStorage.removeItem('isAdmin');
+        localStorage.removeItem("userUuid");
 
       } catch (error) {
         console.error('Error during logout cleanup:', error);

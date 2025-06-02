@@ -1,7 +1,5 @@
 
 import { BASE_URL } from "./api";
-
-// Accept user data as a parameter
 export async function Login(userData) {
   try {
     const response = await fetch(`${BASE_URL}/api/v1/auth/login`, {
