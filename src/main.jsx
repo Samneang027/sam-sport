@@ -6,11 +6,9 @@ import App from "./App.jsx";
 import CartProvider from "./contexts/CartContext.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <BrowserRouter basename="/sam-sport">
-      <CartProvider>
-        <App/>
-      </CartProvider>
-    </BrowserRouter>
-  </StrictMode>
+  <BrowserRouter basename="/sam-sport">
+    <CartProvider>
+      <App />
+    </CartProvider>
+  </BrowserRouter>
 );
