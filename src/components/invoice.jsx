@@ -2,7 +2,7 @@ import React from 'react';
 
 function Invoice ({ cartItems, totalAmount, user }) {
   return (
-    <div className="mt-12 p-8 max-w-5xl mx-auto border border-gray-300 rounded-lg bg-white shadow-md">
+    <div className="mt-12 p-8 max-w-5xl mx-auto print:border-hidden border-gray-300 rounded-lg bg-white">
         <h1 className="text-3xl font-bold text-center text-title mb-2">INVOICE</h1>
         <div className='flex justify-between'>
             {/* Header */}
